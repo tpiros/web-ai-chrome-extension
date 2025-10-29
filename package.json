@@ -1,0 +1,21 @@
+{
+  "name": "extension",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "dompurify": "^3.2.7",
+    "marked": "^16.3.0",
+    "rollup": "^4.52.2",
+    "rollup-plugin-copy": "^3.5.0"
+  }
+}

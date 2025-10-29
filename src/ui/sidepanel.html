@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tab Tidy</title>
+    <link href="sidepanel.css" rel="stylesheet">
+</head>
+<body>
+    <div class="api-status-bar">
+        <div class="api-item" id="language-model">
+            <div class="status-indicator"></div>
+            <span class="api-name">Language Model</span>
+        </div>
+        <div class="api-item" id="writer">
+            <div class="status-indicator"></div>
+            <span class="api-name">Writer</span>
+        </div>
+        <div class="api-item" id="summarizer">
+            <div class="status-indicator"></div>
+            <span class="api-name">Summarizer</span>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Header Card -->
+        <div class="card header-card">
+            <div class="card-content">
+                <div id="overall-status" class="overall-status"></div>
+                <h1>🤖 Tab Tidy</h1>
+                <button id="organise-tabs" class="btn-primary">Organise Tabs</button>
+            </div>
+        </div>
+
+        <!-- Progress Card -->
+        <div class="card progress-section" id="progressContainer">
+            <div class="card-header">
+                <strong>Model Download Progress</strong>
+            </div>
+            <div class="card-content">
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Language Model</span>
+                        <span id="languageModelText">0%</span>
+                    </div>
+                    <progress id="languageModelProgress" value="0" max="100"></progress>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Writer</span>
+                        <span id="writerText">0%</span>
+                    </div>
+                    <progress id="writerProgress" value="0" max="100"></progress>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Summarizer</span>
+                        <span id="summarizerText">0%</span>
+                    </div>
+                    <progress id="summarizerProgress" value="0" max="100"></progress>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clustering Progress -->
+        <div id="clustering-progress" class="clustering-progress">
+            <span id="clustering-status">Initializing...</span>
+        </div>
+
+        <!-- Results Card -->
+        <div class="card results-section" id="results">
+            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <strong>Tab Groups</strong>
+                <button id="ungroup-all" class="ungroup-all-btn" disabled>Ungroup All</button>
+            </div>
+            <div class="card-content">
+                <div id="groups-list"></div>
+            </div>
+        </div>
+
+        <!-- Log Card -->
+        <div class="card">
+            <div class="card-header">
+                <strong>Activity Log</strong>
+            </div>
+            <div class="card-content">
+                <div id="log" class="log-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./sidepanel.js"></script>
+</body>
+</html>
