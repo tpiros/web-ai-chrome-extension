@@ -78,7 +78,6 @@ This extension showcases Chrome's experimental built-in AI capabilities through 
 1. Clone this repository:
    ```bash
    git clone <repository-url>
-   cd extension
    ```
 
 2. Install dependencies:
